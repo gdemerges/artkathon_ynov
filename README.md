@@ -1,1 +1,6 @@
-# artkathon_ynov
+# Artkathon
+
+## Equipe
+
+## Description du projet
+
