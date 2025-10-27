@@ -26,13 +26,13 @@ Les différents datasets peuvent être sélectionnés depuis une interface **Str
 ## Fonctionnement du code
 Voici comment se déroule de façon séquentielle le code python permettant la création d'une image à partir d'un dataset en JSON. 
 
-1 : récupération des inputs de l'utilisateur (le nom du fichier d'entrée, le nom de la colonne année ainsi que le nom de la colonne valeur et enfin le nom de sortie du fichier)
-2 : vérification de l'existence du fichier JSON et gestion d'érreurs 
-3 : récupération des données dans le dataset grâce aux inputs de l'utilisateur
-4 : normalisation des données (les données seront entre 0 et 1, cela évite que si on a une valeur à 100 et une a 5000000 on en voit pas une des deux)
-5 : définition du canevas sur lequel on va insérer les cercles
-6 : déssiner les cercles grâce aux paramètres définis dans le code (taille min et max des cercles, couleur min et max du jaune pour les étoiles) et utilisation de la valeur normalisée pour définir la taille et l'intensité de chaque cercle. Pour avoir un effet de "galaxie" et pas une ligne centrale, la position verticale des cercles est aléatoire pour un rendu visuel pour attrayant. 
-7 : sauvegarde et exportation du fichier dans le répertoir d'éxécution du code
+**1 : récupération des inputs de l'utilisateur (le nom du fichier d'entrée, le nom de la colonne année ainsi que le nom de la colonne valeur et enfin le nom de sortie du fichier)
+**2 : vérification de l'existence du fichier JSON et gestion d'érreurs 
+**3 : récupération des données dans le dataset grâce aux inputs de l'utilisateur
+**4 : normalisation des données (les données seront entre 0 et 1, cela évite que si on a une valeur à 100 et une a 5000000 on en voit pas une des deux)
+**5 : définition du canevas sur lequel on va insérer les cercles
+**6 : déssiner les cercles grâce aux paramètres définis dans le code (taille min et max des cercles, couleur min et max du jaune pour les étoiles) et utilisation de la valeur normalisée pour définir la taille et l'intensité de chaque cercle. Pour avoir un effet de "galaxie" et pas une ligne centrale, la position verticale des cercles est aléatoire pour un rendu visuel pour attrayant. 
+**7 : sauvegarde et exportation du fichier dans le répertoir d'éxécution du code
 
 ## Utilisation du programme
 Pour lancer le programme, nous vous conseillons de créer un dossier dans lequel vous aurez le programme nommé "V2" ainsi que le dataset associé. 
