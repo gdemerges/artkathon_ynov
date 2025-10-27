@@ -15,4 +15,4 @@ Les données représenteront en fonction de la tempérautre une couleur qui s'af
 
 <img width="1011" height="495" alt="image" src="https://github.com/user-attachments/assets/527cbbe6-bbdf-412a-b49c-98960bf84e17" />
 
-Les différents Datasets pourront être prosés via un streamlit avec différents flux de données (afficher par année, par mois précis...), et changera automatiquement le rendu visuel tu tableau.
+Les différents Datasets pourront être proposés via un streamlit avec différents flux de données (afficher par année, par mois précis...), et changera automatiquement le rendu visuel tu tableau.
