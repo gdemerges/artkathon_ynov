@@ -1,10 +1,10 @@
 # Artkathon
   Sujet : Créer un programme qui génère automatiquement une œuvre d’art abstraite à partir de données. Le rendu final doit être une image statique (PNG ou JPG), produite uniquement par votre code.
 ## Equipe
-  3 Data Engineer : 
-     Esteban COSTA
-    - Guillaume DEMERGÈS
-    - Wafah LEMAISSI
+3 Data Engineers :
+- **Esteban COSTA**
+- **Guillaume DEMERGÈS**
+- **Wafah LEMAISSI**
     
 ## Description du projet
 => Lancement du projet avec un échange des différentes idées. 
@@ -15,4 +15,16 @@ Les données représenteront en fonction de la tempérautre une couleur qui s'af
 
 <img width="1011" height="495" alt="image" src="https://github.com/user-attachments/assets/527cbbe6-bbdf-412a-b49c-98960bf84e17" />
 
-Les différents Datasets pourront être proposés via un streamlit avec différents flux de données (afficher par année, par mois précis...), et changera automatiquement le rendu visuel tu tableau.
+Les différents datasets peuvent être sélectionnés depuis une interface **Streamlit**, permettant de choisir :
+
+- la **région** (*globe*, *hémisphère nord/sud*, *continents*, etc.)
+- la **surface** (*terre*, *océan*, ou *les deux*)
+- le **paramètre** (*température moyenne* `tavg` ou *précipitations* `pcp`)
+- la **période d’années** à afficher
+  
+## Source des données
+
+Les données proviennent directement de la plateforme officielle de la **NOAA** :  
+[Climate at a Glance – Global Time Series](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series)
+
+L’API publique de la NOAA fournit les **anomalies de température** et de **précipitation** sous forme de **fichier JSON**, exploitées en temps réel par le programme.
