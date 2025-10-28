@@ -58,22 +58,10 @@ Ensuite, il génèrera une image à partir de vos données que vous pourrez trou
 Si vous avez ouvert le notebook v2 dans votre éditeur de code, lancez-le. Ensuite veuillez répondre comme suit aux différentes questions qui vous seront posées dans la console : 
 
 1 - Pour le dataset BMW nommé "data.json", répondre comme suit aux questions de la console : 
-data.json
-année
-ventes
-imagebmw
-0
-0
-0
+data.json / année / ventes / imagebmw / 0 / 0 / 0
 
 2 - Pour le dataset des températures nommé "autredata.json", répondre comme suit aux questions de la console : 
-autredata.json
-année
-anomaly
-imagetemperatures
-0
-0
-0
+autredata.json / année /anomaly / imagetemperatures / 0 / 0 / 0
 
 Maintenant, vous avez l'image associée au dataset dans votre répertoire. Il est important de noter qu'en lançant le programme avec les mêmes données, l'image finale peut varier car la position verticale des cercles est aléatoire.
 
