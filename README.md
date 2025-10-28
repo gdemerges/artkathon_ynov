@@ -32,7 +32,9 @@ Voici comment se déroule de façon séquentielle le code python permettant la c
 - 6 : déssiner les cercles grâce aux paramètres définis dans le code (taille min et max des cercles, couleur min et max du jaune pour les étoiles) et utilisation de la valeur normalisée pour définir la taille et l'intensité de chaque cercle. Pour avoir un effet de "galaxie" et pas une ligne centrale, la position verticale des cercles est aléatoire pour un rendu visuel pour attrayant.
 - 7 : sauvegarde et exportation du fichier dans le répertoir d'éxécution du code
 
-## Utilisation du programme
+Ces étapes sont "manuelles" lorsqu'on lance le code, toutefois une interface Streamlit gère ces étapes avec une interface visuelle. 
+
+## Utilisation du programme (sans l'interface Streamlit)
 Pour lancer le programme, nous vous conseillons de créer un dossier dans lequel vous aurez le programme nommé "V2" ainsi que le dataset associé. 
 Une fois sur votre éditeur, lancez le code. 
 
@@ -43,7 +45,13 @@ Il vous demandera :
 - le nom de sortie du fichier (ex : monfichier)
 
 Ensuite, il génèrera une image à partir de vos données que vous pourrez trouver dans le même répertoi où vous avez executé le code. 
-  
+
+
+## Utilisation du programme (avec l'interface Streamlit)
+--- ici guillaume est ce que tu peux juste pointer les différences
+
+
+
 ## Source des données
 
 Les données proviennent directement de la plateforme officielle de la **NOAA** :  
