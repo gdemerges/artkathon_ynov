@@ -54,7 +54,28 @@ Il vous demandera :
 
 Ensuite, il génèrera une image à partir de vos données que vous pourrez trouver dans le même répertoir où vous avez executé le code. 
 
+## Lancer le programme sans streamlit avec les différents datasets 
+Si vous avez ouvert le notebook v2 dans votre éditeur de code, lancez-le. Ensuite veuillez répondre comme suit aux différentes questions qui vous seront posées dans la console : 
 
+1 - Pour le dataset BMW nommé "data.json", répondre comme suit aux questions de la console : 
+data.json
+année
+ventes
+imagebmw
+0
+0
+0
+
+2 - Pour le dataset des températures nommé "autredata.json", répondre comme suit aux questions de la console : 
+autredata.json
+année
+anomaly
+imagetemperatures
+0
+0
+0
+
+Maintenant, vous avez l'image associée au dataset dans votre répertoire. Il est important de noter qu'en lançant le programme avec les mêmes données, l'image finale peut varier car la position verticale des cercles est aléatoire.
 
 ## Utilisation du programme (avec l'interface Streamlit)
 --- ici guillaume est ce que tu peux juste pointer les différences
