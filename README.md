@@ -5,27 +5,32 @@
 - **Esteban COSTA**
 - **Guillaume DEMERGÈS**
 - **Wafah LEMAISSI**
+- **Chien Cong PHAM**
     
 ## Description du projet
-=> Lancement du projet avec un échange des différentes idées. 
-=> Décision de créer une Heat Map qui, en fonction du jeu de données, rempli un tableau avec un dégradé de couleurs suivant la température en entrée du fichier.
-=> Après avoir mis en place un POC pour la heatmap, nous avons consulté notre enseignant qui nous a conseillé d'avoir plus d'abstraction. Suite à cela, nous avons revu le modèle pour générer une sortie qui représente une galaxie d'étoiles. 
+- Lancement du projet avec un échange des différentes idées. 
+- Décision de créer une Heat Map qui, en fonction du jeu de données, rempli un tableau avec un dégradé de couleurs suivant la température en entrée du fichier.
+- Après avoir mis en place un POC pour la heatmap, nous avons consulté notre enseignant qui nous a conseillé d'avoir plus d'abstraction. Suite à cela, nous avons revu le modèle pour générer une sortie qui représente une galaxie d'étoiles.
 
-La thématique principale du code est **le réchauffement climatique**. Le flux de données récupéré représentera les variations de températures au fil des années depuis 1850 jusqu'à aujourd'hui. 
-Les données représenteront de étoiles de taille et d'intensité différente en fonction de la température ( plus l'étoile et grosse et net en couleur, plus la température en °C sera élévée ) 
+Le script python a été testé sur 2 jeux de données. Le premier traite la thématique du réchauffement climatique. Le flux de données récupéré représente les variations de températures au fil des années depuis 1850 jusqu'à aujourd'hui. Le second concerne les ventes de la marque BMW au fil des années.
 
-Les différents datasets peuvent être sélectionnés depuis une interface **Streamlit**, permettant de choisir :
+La représentation finale de ces données prend la forme suivante : l'utilisateur choisit la couleur du fond de l'image, et viendront s'insérer des cercles de couleur jaune.
+L'objectif était, avec un fond noir, de réprésenter une galaxie d'étoiles. 
+- Les cercles répondent à deux règles : leur taille leur intensité varie fonction de la valeur normalisée de la température ou du montant des ventes. Ainsi, plus l'étoile et grosse et puissante en couleur, plus la température en °C / les ventes sont élévées. 
 
-- la **région** (*globe*, *hémisphère nord/sud*, *continents*, etc.)
-- la **surface** (*terre*, *océan*, ou *les deux*)
-- le **paramètre** (*température moyenne* `tavg` ou *précipitations* `pcp`)
-- la **période d’années** à afficher
+Nous avons également mis en place une interface Streamlit, permettant de choisir (pour le dataset des températures) :
+- la région
+- la surface 
+- le paramètre (*température moyenne* `tavg` ou *précipitations* `pcp`)
+- la période d’années
+
+Etant donné que la webapp n'était pas attendue, nous avons concentré nos efforts sur la version sans streamlit qui est dans un notebook python nommé "V2". C'est cette version qui contient le code le plus à jour.
 
 ## Fonctionnement du code
 Voici comment se déroule de façon séquentielle le code python permettant la création d'une image à partir d'un dataset en JSON. 
 
-- 1 : récupération des inputs de l'utilisateur (le nom du fichier d'entrée, le nom de la colonne année ainsi que le nom de la colonne valeur et enfin le nom de sortie du fichier)
-- 2 : vérification de l'existence du fichier JSON et gestion d'érreurs
+- 1 : récupération des inputs de l'utilisateur (le nom du fichier d'entrée, le nom de la colonne année ainsi que le nom de la colonne valeur et enfin le nom de sortie du fichier, la teinte du fond avec le code RGB ...)
+- 2 : vérification de l'existence du fichier JSON et vérification des valeurs RGB entrée + gestion des erreurs de saisie 
 - 3 : récupération des données dans le dataset grâce aux inputs de l'utilisateur
 - 4 : normalisation des données (les données seront entre 0 et 1, cela évite que si on a une valeur à 100 et une a 5000000 on en voit pas une des deux)
 - 5 : définition du canevas sur lequel on va insérer les cercles
@@ -35,26 +40,21 @@ Voici comment se déroule de façon séquentielle le code python permettant la c
 Ces étapes sont "manuelles" lorsqu'on lance le code, toutefois une interface Streamlit gère ces étapes avec une interface visuelle. 
 
 ## Utilisation du programme (sans l'interface Streamlit)
-Pour lancer le programme, nous vous conseillons de créer un dossier dans lequel vous aurez le programme nommé "V2" ainsi que le dataset associé. 
-Une fois sur votre éditeur, lancez le code. 
+Pour lancer le programme, rendez vous dans le dossier "version sans streamlit" et ouvrer le notebook python nommé "V2".  
+Une fois sur votre éditeur, lancez le notebook. 
 
 Il vous demandera : 
 - le nom du fichier à partir duquel vous souhaitez générer une image
 - le nom de la colonne de temps (Année)
 - le nom de la colonne contenant les valeurs (ventes?)
 - le nom de sortie du fichier (ex : monfichier)
+- la valeur rouge du fond
+- la valeur vert du fond
+- la valeur bleu du fond
 
-Ensuite, il génèrera une image à partir de vos données que vous pourrez trouver dans le même répertoi où vous avez executé le code. 
+Ensuite, il génèrera une image à partir de vos données que vous pourrez trouver dans le même répertoir où vous avez executé le code. 
+
 
 
 ## Utilisation du programme (avec l'interface Streamlit)
 --- ici guillaume est ce que tu peux juste pointer les différences
-
-
-
-## Source des données
-
-Les données proviennent directement de la plateforme officielle de la **NOAA** :  
-[Climate at a Glance – Global Time Series](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series)
-
-L’API publique de la NOAA fournit les **anomalies de température** et de **précipitation** sous forme de **fichier JSON**, exploitées en temps réel par le programme.
