@@ -66,4 +66,10 @@ autredata.json / année /anomaly / imagetemperatures / 0 / 0 / 0
 Maintenant, vous avez l'image associée au dataset dans votre répertoire. Il est important de noter qu'en lançant le programme avec les mêmes données, l'image finale peut varier car la position verticale des cercles est aléatoire.
 
 ## Utilisation du programme (avec l'interface Streamlit)
---- ici guillaume est ce que tu peux juste pointer les différences
+Pour utiliser le programme avec l'interface Streamlit vous devez exécuter le fichier main.py sur votre poste. Cela vous redirigera directement vers notre interface data. Le flux de données JSON récupéré sera celui des données de températures, et les différentes augmentations de températures au fil des années. Avec l'interface, vous pourrez : 
+
+- Choisir la région que vous souhaitez (Global pour les température de tous les pays ou par région du monde)
+- Le paramètre (les températures moyennes ou les précipations)
+- La plage d'années avec le slider (si vous souhaitez une plage de données précise)
+
+Après avoir choisi vos paramètre, cliquez sur **"Générer l'oeuvre"** et votre image apparait juste en dessous. Vous pourrez télécharger l'image directement sur votre poste ! 
